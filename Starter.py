@@ -1,5 +1,5 @@
 import re
-import Markov
+import markovModel
 
 
 def removePun(string):
@@ -63,8 +63,8 @@ def getStory(title):
     return result.split()
 
 #Populate hash table
-Markov.populateTable(getStory("trainingText1.txt"))
-Markov.populateTable(getStory("trainingText2.txt"))
+markovModel.populateTable(getStory("trainingText1.txt"))
+markovModel.populateTable(getStory("trainingText2.txt"))
 
 #Writes 2000 word paper
-Markov.writePaper()
+markovModel.writePaper()
